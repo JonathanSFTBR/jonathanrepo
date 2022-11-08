@@ -1,0 +1,267 @@
+*{font-family: Arial, Helvetica, sans-serif;}
+body{
+    background-image: url(colo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: alternate
+    pan 6s infinite alternate linear;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 247, 235, 0.062);
+
+    
+} 
+h1{
+    color:rgb(0, 174, 255);
+    
+    box-shadow: -7px 4px 28px -3px blue
+}
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    perspective: 90rem;
+    perspective-origin: 30% 60%;
+}
+
+.div-transform {
+    display: flex;
+    
+}
+.card {
+    background: url(bb.svg) center;
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 0px 18px;
+    width: 244px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+}
+
+.card::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+
+.card h2 {
+    text-transform: capitalize;
+}
+.card h4 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 48px;
+}
+
+.card-1 {
+    background-size: cover;
+    transform: scale(1.02);
+    margin-right: 40px;
+}
+
+.card-1:hover {
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px rgb(0, 255, 255);
+}
+
+.card-1::before {
+    background: linear-gradient(90deg, rgb(4, 252, 177) 0%, rgb(0, 183, 255) 100%);
+}
+
+.card-2 {
+    background-size: cover;
+    transform: scale(1.01);
+    margin-right: 31px;
+}
+.card-2:hover {
+    transform: scale(1.1);
+    box-shadow: -7px 4px 28px -3px rgb(255, 0, 242);
+}
+.card-2::before {
+    background: linear-gradient(90deg, pink 0%, rgba(1, 159, 207, 0.678) 100%);
+}
+
+.card-3 {
+    background-size: cover;
+}
+
+.card-3:hover {
+    transform: scale(1.08);
+    box-shadow: -7px 4px 28px -3px rgb(255, 0, 119);
+}
+
+.card-3::before {
+    background: linear-gradient(90deg, rgb(0, 119, 128) 0%, rgb(183, 0, 255) 100%);
+}
+
+@media (width >= 500px) {
+    body {
+        padding: 0;
+    }
+}
+
+
+.area {
+    background-image: url(eu.jpg);
+    background-size: 100%;
+    width: 200px;
+    height: 200px;
+    margin: 10% auto;
+
+    border-radius: 50%; 
+}
+
+h1{/*
+    padding-left: 42%;
+    margin: auto;
+    padding: auto;
+*/
+text-align: center;
+}
+
+.carrosel {
+    -webkit-perspective: 250px;
+    -moz-perspective: 250px;
+    width: 400px;
+    height: 200px;
+    top: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes efeitoCarrosel {
+    from {
+        -webkit-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -webkit-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes efeitoCarrosel {
+    from {
+        -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+        z-index: 10;
+        opacity: 1
+    }
+
+    50% {
+        z-index: -10;
+    }
+
+    to {
+        -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+        z-index: 10;
+        opacity: 1
+    }
+}
+
+.caixa__card {
+    width: 90px;
+    height: 100px;
+    background-color: #442222;
+    position: absolute;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    top: 35px;
+    left: 125px;
+    font-size: 9px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    text-align: center;
+    -webkit-animation-name: efeitoCarrosel;
+    -moz-animation-name: efeitoCarrosel;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+.caixa__card:hover {
+    border: solid #4466cc 3px;
+    box-shadow: 0px 0px 10px #4466cc;
+}
+
+.caixa__card.cc__1 {
+    background: linear-gradient(-229deg, #0093E9, #80D0C7);
+    -webkit-animation-delay: -7s;
+    -moz-animation-delay: -7s;
+}
+
+.caixa__card.cc__2 {
+
+    background: linear-gradient(-229deg, #00DBDE, #FC00FF);
+    -webkit-animation-delay: -6s;
+    -moz-animation-delay: -6s;
+}
+
+.caixa__card.cc__3 {
+
+    background: linear-gradient(-229deg, #50d990, #d4d054);
+    -webkit-animation-delay: -5s;
+    -moz-animation-delay: -5s;
+}
+
+.caixa__card.cc__4 {
+    background: linear-gradient(-229deg, #cf91ff, #5782F5);
+    -webkit-animation-delay: -4s;
+    -moz-animation-delay: -4s;
+}
+
+.caixa__card.cc__5 {
+    background: linear-gradient(-229deg, #642B73, #C6426E);
+    -webkit-animation-delay: -3s;
+    -moz-animation-delay: -3s;
+}
+
+.caixa__card.cc__6 {
+    background: linear-gradient(-229deg, #D9AFD9, #97D9E1);
+    -webkit-animation-delay: -2s;
+    -moz-animation-delay: -2s;
+}
+
+.caixa__card.cc__7 {
+    background: linear-gradient(-229deg, #FBAB7E, #F7CE68);
+    -webkit-animation-delay: -1s;
+    -moz-animation-delay: -1s;
+}
+
+.caixa__card.cc__8 {
+    background: linear-gradient(-229deg, #1472ff, #A8EB12);
+}
+
+h5{
+    font-style:italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color:rgb(182, 9, 250);
+    text-shadow: 1px 1px 1px #ff01c8;
+}
+
+
+
+
